@@ -1,0 +1,14 @@
+#DATA SOURCE 
+spring:    
+    hikari:
+      maximum-pool-size: 3
+
+#JPA
+jpa:
+  show-sql: true
+  hibernate:
+    ddl-auto: none
+      
+#WEB CONTAINER
+server:
+  port: 8087

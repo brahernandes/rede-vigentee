@@ -1,0 +1,8 @@
+#DATA SOURCE 
+spring:    
+    hikari:
+      maximum-pool-size: 5
+
+#WEB CONTAINER
+server:
+  port: 8086
