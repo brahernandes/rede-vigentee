@@ -8,12 +8,6 @@ spring:
   jmx.enabled: false
 
 #DATA SOURCE
-  datasource:
-    url: jdbc:postgresql://devdb:5434/gtsaude
-    username: gtsaude-${spring.application.name}
-    password: gtsaude
-    hikari:
-      maximum-pool-size: 3
 
 #JPA
   jpa:

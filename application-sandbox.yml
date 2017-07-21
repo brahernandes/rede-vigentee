@@ -2,6 +2,10 @@
 spring:
   datasource:
     url: jdbc:postgresql://devdb:5434/gtsaude
+        username: gtsaude-${spring.application.name}
+        password: gtsaude
+        hikari:
+          maximum-pool-size: 3
 
 #OAUTH2
 security:
