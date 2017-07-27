@@ -1,0 +1,14 @@
+#GENERAL
+spring:
+  datasource:
+    url: jdbc:postgresql://devdb:5434/vigsan
+
+#OAUTH2
+security:
+  oauth2:
+    client:
+      client-id: ${spring.application.name}
+      access-token-uri: http://vigsan.sbox.me/usuario/oauth/token
+      user-authorization-uri: http://vigsan.sbox.me/usuario/oauth/authorize
+    resource:
+      user-info-uri: http://vigsan.sbox.me/usuario/api/principal
