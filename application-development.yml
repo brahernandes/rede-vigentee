@@ -18,6 +18,10 @@ spring:
 #THYMELEAF
   thymeleaf:
     cache: false
+  cloud:
+    config:
+      allowOverride: true
+      overrideNone: true
     
 #STATIC RESOURCES
   resources:
