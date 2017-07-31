@@ -98,3 +98,6 @@ server:
     max-threads: 4
   session:
     timeout: 1800
+
+#URL
+url.context: http://gtsaude.itaipu.gov.br

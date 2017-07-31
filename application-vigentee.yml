@@ -12,3 +12,6 @@ security:
       user-authorization-uri: http://vigentee.sbox.me/usuario/oauth/authorize
     resource:
       user-info-uri: http://vigentee.sbox.me/usuario/api/principal
+
+#URL
+url.context: http://vigentee.sbox.me

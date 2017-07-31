@@ -97,3 +97,6 @@ server:
     max-threads: 4
   session:
     timeout: 1800
+    
+#URL
+url.context: http://builder.prognus.com.br:58080

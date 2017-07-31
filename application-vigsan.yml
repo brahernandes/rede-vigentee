@@ -12,3 +12,6 @@ security:
       user-authorization-uri: http://vigsan.sbox.me/usuario/oauth/authorize
     resource:
       user-info-uri: http://vigsan.sbox.me/usuario/api/principal
+
+#URL
+url.context: http://vigsan.sbox.me
