@@ -101,3 +101,6 @@ server:
     max-threads: 4
   session:
     timeout: 1800
+    
+#URL
+url.context: http://127.0.0.1:8080

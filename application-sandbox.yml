@@ -16,3 +16,6 @@ security:
       user-authorization-uri: http://gtsaude.sbox.me/usuario/oauth/authorize
     resource:
       user-info-uri: http://gtsaude.sbox.me/usuario/api/principal
+
+#URL
+url.context: http://gtsaude.sbox.me
