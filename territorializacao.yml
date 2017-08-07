@@ -1,7 +1,11 @@
 #DATA SOURCE 
-spring:    
-    hikari:
-      maximum-pool-size: 3
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: br.com.gtsaude.common.infrastructure.hibernate.dialect.PostgisDialect
+  hikari:
+    maximum-pool-size: 3
 
 #WEB CONTAINER
 server:
