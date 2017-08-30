@@ -1,6 +1,16 @@
 #WEB CONTAINER
 server:
   port: 8080
+
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+ribbon:
+  ReadTimeout: 36000000
+  ConnectTimeout: 36000000
   
 #OAUTH2
 security:
