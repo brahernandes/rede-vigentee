@@ -1,0 +1,5 @@
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 5
+  server:
+    response-cache-update-interval-ms: 5000

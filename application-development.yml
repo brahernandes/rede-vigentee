@@ -89,6 +89,12 @@ dwr:
   debug: true
   cross-domain-session-security: false
 
+eureka:
+  client:
+    registryFetchIntervalSeconds: 5
+ribbon:
+  serverListRefreshInterval: 5
+
 #CACHE
 cache:
   redis:
