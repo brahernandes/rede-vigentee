@@ -19,3 +19,10 @@ security:
 
 #URL
 url.context: http://gtsaude.sbox.me
+
+
+eureka:
+  client:
+    registryFetchIntervalSeconds: 5
+ribbon:
+  serverListRefreshInterval: 5
