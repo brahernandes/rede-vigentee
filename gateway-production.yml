@@ -1,0 +1,3 @@
+zuul:
+    debug:
+        request: true
