@@ -1,7 +1,7 @@
 #DATA SOURCE 
 spring:    
     hikari:
-      maximum-pool-size: 3
+      maximum-pool-size: 10
 
 #WEB CONTAINER
 server:

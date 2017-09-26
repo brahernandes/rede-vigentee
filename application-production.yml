@@ -8,7 +8,7 @@ spring:
     username: gtsaude
     password: gtsaude
     hikari:
-      maximum-pool-size: 3
+      maximum-pool-size: 5
 
 #JPA
   jpa:
