@@ -55,12 +55,12 @@ security:
       client-id: ${spring.application.name}
       client-secret:
       client-authentication-scheme: form
-      access-token-uri: http://vigenteehom.itaipu.gov.br/usuario/oauth/token
+      access-token-uri: http://172.17.0.1/usuario/oauth/token
       user-authorization-uri: http://vigenteehom.itaipu.gov.br/usuario/oauth/authorize
     resource:
       id: ${spring.application.name}
       service-id: ${spring.application.name}-resource
-      user-info-uri: http://vigenteehom.itaipu.gov.br/usuario/api/principal
+      user-info-uri: http://172.17.0.1/usuario/api/principal
       prefer-token-info: false
       jwt:
         keyValue: |
