@@ -27,11 +27,11 @@ spring:
 
 #MAIL
   mail:
-    host: expressodev.prognus.com.br
-    port: 25
-    username: no-reply
-    password: soAsx2gGX6Rbhk
-    from: no-reply@prognus.org
+    host: info-projetos.pti.org.br
+    port: 587
+    username: vigentee@pcr-ccz.pti.net.br
+    password: N86259qMPC94B8F
+    from: rede-vigentee@vigenteehom.itaipu.gov.br
     properties:
       mail.smtp.starttls.enable: false
       mail.properties.mail.smtp.starttls.required: false
