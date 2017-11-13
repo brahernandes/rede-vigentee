@@ -1,37 +1,20 @@
-#GENERAL
 spring:
-  jmx.enabled: false
-
 #DATA SOURCE
   datasource:
-    url: jdbc:postgresql://172.17.0.1:5432/gtsaude
+    url: jdbc:postgresql://<DOCKER_IP>:5432/gtsaude
     username: gtsaude
     password: gtsaude
-    hikari:
-      maximum-pool-size: 5
-
 #JPA
   jpa:
-    show-sql: true
     hibernate:
       ddl-auto: validate
-
-#THYMELEAF
-  thymeleaf:
-    cache: false
-
-#STATIC RESOURCES
-  resources:
-    chain:
-      cache: false
-
 #MAIL
   mail:
     host: info-projetos.pti.org.br
     port: 587
     username: vigentee@pcr-ccz.pti.net.br
     password: N86259qMPC94B8F
-    from: rede-vigentee@vigenteehom.itaipu.gov.br
+    from: rede-vigentee@<DOMINIO>
     properties:
       mail.smtp.starttls.enable: false
       mail.properties.mail.smtp.starttls.required: false
@@ -39,13 +22,6 @@ spring:
       mail.properties.mail.smtps.debug: true
       mail.properties.mail.smtp.debug: true
       mail.properties.mail.debug: true
-
-#FILE UPLOAD
-  http:
-    multipart:
-      max-file-size: 50MB
-      max-request-size: 100MB
-
 #OAUTH2
 security:
   oauth2:
@@ -55,50 +31,17 @@ security:
       client-id: ${spring.application.name}
       client-secret:
       client-authentication-scheme: form
-      access-token-uri: http://172.17.0.1/usuario/oauth/token
-      user-authorization-uri: http://vigenteehom.itaipu.gov.br/usuario/oauth/authorize
+      access-token-uri: http://<DOCKER_IP>:8080/usuario/oauth/token
+      user-authorization-uri: http://<DOMINIO>/usuario/oauth/authorize
     resource:
       id: ${spring.application.name}
       service-id: ${spring.application.name}-resource
-      user-info-uri: http://172.17.0.1/usuario/api/principal
+      user-info-uri: http://<DOCKER_IP>:8080/usuario/api/principal
       prefer-token-info: false
       jwt:
         keyValue: |
           -----BEGIN PUBLIC KEY-----
           MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAihRoCostoZBy0pZhlHfalgaspU7RWpthsA4nFdixmEbJlJBVwwU8Eo29Gm2+EP9MVNDbPI43aDLcWoEjIhyfd7Oejtvz8H/30nVigdrL1UnMOloqEWKvg1rYhYcsayWoL6kZJrPuEeoagByG9W0lNtSWExgrSksgkwexUOG69wYKtCrIuwgtiJAEbNhXCEZOiR8zBI2Jm5JcWmnN5oVjOA6j4279fkIvil24ITbPqM4Jff9iehgRoR3NAnXJPcKpiiQ83LdnGFQqdmxFcXSf3DCy498PV2Jsog1KsEaKL+FWQiAN5QNKOvFiFQkxEfOvykW5IyQbA5kURVOV01h2vQIDAQAB
           -----END PUBLIC KEY-----
-
-#LOGGING
-logging.level:
-  org.hibernate: INFO
-  org.glassfish.jersey: INFO
-  org.directwebremoting: INFO
-  org.springframework.web: INFO
-  org.springframework.context.support: INFO
-  org.springframework.security: INFO
-  org.springframework.security.oauth2: TRACE
-
-#FLYWAY
-flyway:
-  enabled: true
-
-#DWR
-dwr:
-  debug: true
-  cross-domain-session-security: false
-
-#CACHE
-cache:
-  redis:
-    host: cache
-    port: 6379
-
-#SERVER
-server:
-  tomcat:
-    max-threads: 4
-  session:
-    timeout: 1800
-
 #URL
-url.context: http://vigenteehom.itaipu.gov.br
+url.context: http://<DOMINIO>
