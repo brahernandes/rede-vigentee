@@ -27,18 +27,14 @@ spring:
 
 #MAIL
   mail:
-    host: info-projetos.pti.org.br
+    host: smtp.gmail.com
     port: 587
-    username: vigentee@pcr-ccz.pti.net.br
-    password: N86259qMPC94B8F
-    from: rede-vigentee@vigenteehom.itaipu.gov.br
+    username: vigentee@gmail.com
+    password: rede-vigentee
+    from: vigentee@gmail.com
     properties:
       mail.smtp.starttls.enable: true
-      mail.properties.mail.smtp.starttls.required: true
-      mail.properties.mail.smtp.ssl.enable: false
-      mail.properties.mail.smtps.debug: true
-      mail.properties.mail.smtp.debug: true
-      mail.properties.mail.debug: true
+      mail.properties.mail.smtp.auth: true
 
 #FILE UPLOAD
   http:
