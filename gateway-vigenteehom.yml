@@ -1,0 +1,9 @@
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+ribbon:
+  ReadTimeout: 6000
+  ConnectTimeout: 6000
