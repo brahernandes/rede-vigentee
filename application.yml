@@ -59,7 +59,9 @@ feign:
 server:
   tomcat:
     redirect-context-root: true
-  compression.enabled: true
+  compression:
+    enabled: true
+    mime-types: application/json
   session:
     persistent: true
     timeout: 1800
